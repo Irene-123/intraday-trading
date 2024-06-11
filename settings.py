@@ -14,7 +14,7 @@ import os
 import json
 
 # Specify the correct path to your broker_credentials.json file
-BROKER_CREDENTIALS_FILE = "C:/Users/chand/Desktop/ntradpy/intraday-trading/broker_credentials.json"
+BROKER_CREDENTIALS_FILE = "broker_credentials.json"
 
 try:
     with open(BROKER_CREDENTIALS_FILE, "r") as file:

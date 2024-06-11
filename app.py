@@ -9,8 +9,6 @@ def main():
     quantity = 10
     price = 2500.0
     order_type = "BUY"
-    
-    breakpoint()
 
     response = order_manager.place_order(scrip_code=scrip_code, quantity=quantity, price=price, order_type=order_type)
     print("Order Response:", response)

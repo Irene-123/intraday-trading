@@ -223,7 +223,12 @@ class OrderManager:
             }
             print(f"Placing order with parameters: {order}")
             response = self.client.place_order(
-              order
+                Exchange = exchange,
+                ExchangeType = exchange_segment,
+                ScripCode = scrip_code,
+                Qty = quantity,
+                Price = price,
+                OrderType = order_type
             )
             print(f"Order response: {response}")
             return response
@@ -271,6 +276,6 @@ if __name__ == "__main__":
     broker = Broker()
     order_manager = OrderManager(broker.client)
     # Example usage:
-    response = order_manager.place_order(scrip_code="500325", quantity=10, price=2500.0, order_type="BUY")
+    response = order_manager.place_order(scrip_code="500325", quantity=10, price=2500, order_type="BUY")
     print(response)
 
